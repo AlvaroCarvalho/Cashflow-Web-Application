@@ -1,0 +1,31 @@
+{
+    "name": "casa/facilpizza",
+    "description": "Projeto de sistema de lançamento e balanço de contas",
+    "type": "project",
+    "require": {
+        "coffeecode/router": "^1.0",
+        "php": "^7.3",
+        "ext-pdo": "*",
+        "league/plates": "^v4.0.0-alpha",
+        "coffeecode/datalayer": "^1.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "AlvaroCarvalho",
+            "email": "alvaro.azeredo@hotmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "config": {
+        "vendor-dir": "vendor"
+    },
+    "autoload": {
+        "psr-4": {
+            "Source\\": "Source/"
+        },
+        "files": [
+            "Source/config.php"
+        ]
+    }
+}

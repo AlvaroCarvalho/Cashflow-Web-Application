@@ -1,0 +1,198 @@
+.customer__menu{
+    display: flex;
+
+    li{
+        margin: 0px 8px;
+        border-bottom: 1px solid transparent;
+        transition: 0.3s;
+    
+        &:hover{
+            border-bottom: 1px solid #fff;
+        }
+    }
+}
+
+.customer__warning{
+    @include white-card(100%);
+    color: $main-text-color;
+}
+
+.customer__warning--success{
+    background-color: $success-color;
+    border: 2px solid darken($success-color, 10%);
+}
+
+.customer__warning--error{
+    background-color: $error-color;
+    border: 2px solid darken($error-color, 10%);
+}
+
+.customer__search{
+    @include white-card(100%);
+
+    .search__options{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 50%;
+        margin: 0px auto;
+
+        p{
+            font-weight: 400;
+            font-size: 18px;
+            margin-right: 20px;
+        }
+
+        .input-container{
+            
+            input{
+                display: none;
+
+                &:checked ~ label{
+                    background-color: $main-color;
+                    color: $main-text-color;
+                }
+            }
+
+            label{
+                margin: 0px 10px;
+                padding: 5px 10px;
+                border-radius: 4px;
+                transition: 0.3s;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .search__query{
+        width: 50%;
+        display: flex;
+        margin: 30px auto 0px;
+    
+        .input-container{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            border: 1px solid $main-color;
+            border-radius: 4px;
+
+            input{
+                padding: 5px 10px;
+                border: none;
+                font-size: 16px;
+            }
+
+            input[type=text]{
+                flex: 1 0 0;
+            }
+
+            input[type=submit]{
+                color: $main-text-color;
+                background-color: $main-color;
+            }
+        }
+    }
+}
+
+.customer__list{
+    @include white-card(100%);
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    a{
+        flex: 0 0 48%;
+        margin: 20px 1%;
+        padding: 10px;
+        border-bottom: 2px solid #c8c8c8;
+        transition: 0.3s;
+
+        .list__item{
+            width: 100%;
+            margin: 0px auto;
+        }
+
+        &:hover{
+            border-bottom: 2px solid $main-color;
+        }
+    }
+}
+
+.customer__profile{
+    @include white-card(100%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    img{
+        @include profile-picture(200px, 200px, 50px);
+        flex: 0 0 20%;
+    }
+
+    .profile__data{
+        flex: 0 0 65%;
+    }
+}
+
+.customer__form{
+    @include white-card(100%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .input-container{
+        margin: 10px 0px;
+    }
+
+    .input-container--xsmall{
+        @include input-container(0 0 20%);
+    }
+
+    .input-container--small{
+        @include input-container(0 0 30%);
+    }
+
+    .input-container--medium{
+        @include input-container(0 0 48%);
+    }
+
+    .input-container--large{
+        @include input-container(0 0 100%);
+    }
+
+    #customer-type{
+
+        label, select{
+            max-width: 250px;
+            margin: 0px 5px;
+        }
+    }
+
+    .ion-md-add-circle-outline{
+        font-size: 24px;
+        color: $main-color;
+        cursor: pointer;
+    }
+}
+
+.customer__message{
+    border-radius: 10px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+
+    p{
+        font-size: 18px;
+        color: $main-text-color;
+    }
+
+    &--success{
+        background-color: $success-color;
+    }
+
+    &--fail{
+        background-color: $error-color;
+    }
+}

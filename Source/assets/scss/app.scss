@@ -1,0 +1,27 @@
+/* Basic settings */
+
+@import './abstracts/variables';
+@import './abstracts/mixins';
+@import './base/base';
+@import './base/typography';
+@import './base/application';
+
+/* Vendors */
+
+@import './vendors/icons';
+
+/* Components */
+
+@import './components/sidebar';
+@import './components/content';
+
+/* Pages */
+
+@import './pages/login';
+@import './pages/customer';
+@import './pages/users';
+@import './pages/registers';
+@import './pages/entries';
+@import './pages/reports';
+@import './pages/operations';
+

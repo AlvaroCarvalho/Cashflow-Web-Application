@@ -1,0 +1,59 @@
+.section-header{
+    @include white-card(100%);
+    margin-bottom: 30px;
+    background-image: $main-background;
+    color: $main-text-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1{
+        font-size: 36px;
+        font-weight: 300;
+    }
+
+    p{
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+
+#message{
+    text-align: center;
+    color: $main-text-color;
+    padding: 5px 0px;
+    width: 100%;
+    flex: 0 0 100%;
+    margin: 5px 0px;
+}
+
+.loading{
+    margin: 0px auto;
+    width: 100px;
+    height: auto;
+    display: none;
+}
+
+.success{
+    background-color: $success-color;
+}
+
+.error{
+    background-color: $error-color;
+}
+
+.fadeOut{
+    animation-duration: 1s; 
+    animation-name: fadeout;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeout{
+    from{
+        opacity: 1;
+    }
+
+    to{
+        opacity: 0;
+    }
+}

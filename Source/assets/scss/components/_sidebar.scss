@@ -1,0 +1,66 @@
+.sidebar{
+    height: 100px;
+    width: 100vw;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: darken($main-color, 17%);
+    color: $main-text-color;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    z-index: 999;
+    min-width: 1140px;
+
+    &__profile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            @include profile-picture(70px, 70px, 70px);
+        }
+
+        p{
+            margin-top: 10px;
+            text-align: center;
+            margin-left: 20px;
+        }
+    }
+
+    &__menu{
+        flex: 1 0 0;
+        display: flex;
+        justify-content: flex-end;
+
+        li{
+            padding: 10px 30px;
+            text-align: center;
+            font-size: 16px;
+            transition: 0.3s;
+            font-weight: 700;
+            border-right: 1px solid rgba(#fff, 0.1);
+            
+            a{
+                margin: 0px auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                i{
+                    margin-right: 10px;
+                    font-size: 24px;
+                }
+            }
+
+            &:last-of-type{
+                border-right: none;
+            }
+
+            &:hover{
+                background-color: rgba(#fff, 0.1);
+            }
+
+        }
+    }
+}

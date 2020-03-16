@@ -1,0 +1,70 @@
+.user-form{
+    @include white-card(30%);
+    display: flex;
+    flex-direction: column;
+    height: 470px;
+
+    .input-container{
+        @include input-container(1 0 0);
+    }
+
+    .input-container:last-of-type{
+        text-align: center;
+    }
+
+    #update-user{
+        display: none;
+    }
+}
+
+.users-list{
+    @include white-card(65%);
+    height: 470px;
+
+    &__list{
+        border: $table-borders;
+        border-radius: 5px;
+        padding: 5px 0px;
+        overflow-y: auto;
+        max-height: 350px;
+    }
+
+    &__summary{
+        font-weight: 700;
+    }
+
+    &__user{
+        width: 100%;
+        display: flex;
+        border-bottom: $table-borders;
+
+        li{
+            flex: 0 0 20%;
+            text-align: center;
+            padding: 5px 0px;
+
+            select{
+                padding: 3px 5px;
+                border-radius: 4px;
+                font-size: 14px;
+            }
+        
+            &:first-of-type{
+                flex: 0 0 10%;
+            }
+
+            &:nth-child(2){
+                flex: 0 0 30%;
+            }
+
+            &:nth-child(5),
+            &:nth-child(6){
+                flex: 0 0 10%;
+            }
+        }
+
+        &:last-of-type{
+            border-bottom: none;
+        }
+    }
+}

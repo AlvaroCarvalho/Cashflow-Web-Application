@@ -1,0 +1,49 @@
+body, html{
+    text-rendering: optimizeLegibility;
+    min-height: 100vh;
+    min-width: 1240px;
+    position: relative;
+    background-color: $secondary-background;
+    overflow-y: auto;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+input[type=submit],
+input[type=reset],
+button{
+    cursor: pointer;
+}
+
+.container,
+.container-flex{
+    width: 75%;
+    margin: 0px auto;
+    min-width: 1140px;
+    max-width: 1440px;
+}
+
+.container-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.no-records{
+    text-align: center;
+    margin: 15px 0px;
+}

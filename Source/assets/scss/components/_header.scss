@@ -1,0 +1,42 @@
+.main-nav{
+    background-image: $main-background;
+    width: 100%;
+    height: 80px;
+    color: $main-text-color;
+
+    .container-flex{
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo{
+        font-size: 28px;
+        font-weight: 300;
+
+        b{
+            font-weight: 700;
+        }
+    }
+
+    &__menu{
+        display: flex;
+        flex-wrap: wrap;
+
+        li{
+            margin: 0px 10px;
+            padding: 5px 10px;
+            border: 2px solid transparent;
+            border-radius: 4px;
+            transition: 0.3s;
+
+            a{
+                font-size: 20px;
+            }
+
+            &:hover{
+                border: 2px solid #fff;
+            }
+        }
+    }
+}

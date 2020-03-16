@@ -1,0 +1,149 @@
+.registers-forms{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 30%;
+
+    &__payment,
+    &__action{
+        @include white-card(100%);
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+
+        .input-container{
+            @include input-container(1 0 0);
+        }
+
+        h2{
+            margin-bottom: 0px !important;
+        }
+    }
+
+    &__payment{
+        height: auto;
+
+        #update-payment{
+            display: none;
+        }
+    }
+
+    &__action{
+        height: auto;
+
+        #update-action{
+            display: none;
+        }
+    }
+}
+
+.registers__list{
+    @include white-card(100%);
+    width: 65%;
+    margin-bottom: 20px;
+    max-height: 520px;
+    overflow-y: auto;
+
+    .list__tabs{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+
+        li{
+            padding: 5px 10px;
+            font-size: 20px;
+            flex: 0 0 20%;
+            border-bottom: $table-borders;
+            border-top-right-radius: 4px;
+            border-top-left-radius: 4px;
+            text-align: center;
+        
+            &:last-of-type{
+                flex: 1 0 0;
+            }
+        }
+
+        .active{
+            border: $table-borders;
+            border-bottom: none;
+            background-color: #f8f8f8;
+            font-weight: 700;
+        }
+    }
+
+    .list__payment,
+    .list__action{
+        .list-content{
+            border: $table-borders;
+            border-bottom-right-radius: 4px;
+            border-bottom-left-radius: 4px;
+            border-top: none;
+    
+            ul{
+                width: 100%;
+                display: flex;
+                border-bottom: $table-borders;
+                padding: 10px 0px;
+
+                &:last-of-type{
+                    border-bottom: none;
+                }
+            }
+
+            &__summary{
+                background-color: #f8f8f8;
+                font-weight: 700
+            }
+        }
+    }
+
+    .list__payment{
+        ul{
+            li{
+                flex: 0 0 14%;
+                text-align: center;
+                font-size: 14px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                select{
+                    padding: 3px 5px;
+                    border-radius: 4px;
+                    font-size: 14px;
+                }
+
+                &:nth-child(2){
+                    flex: 0 0 25%;
+                }
+
+                &:nth-child(1),
+                &:nth-child(5)
+                &:nth-child(6){
+                    flex: 0 0 8%;
+                }
+            }
+        }
+    }
+
+    .list__action{
+        display: none;
+
+        ul{
+            li{
+                flex: 0 0 15%;
+                text-align: center;
+                
+                select{
+                    padding: 3px 5px;
+                    border-radius: 4px;
+                    font-size: 14px;
+                }
+
+                &:nth-child(2){
+                    flex: 0 0 40%;
+                }
+            }
+        }
+    }
+}
